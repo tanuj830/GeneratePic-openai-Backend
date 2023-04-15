@@ -9,13 +9,13 @@ app.use(express.json())
 PORT = process.env.PORT_NO || 8200
 
     // relaxing security
-    // app.use(cors({
-    //     origin: 'https://www.section.io',
-    //     origin: ['https://www.section.io', 'https://www.google.com/'],
-    //     origin: '*',
-    //     allowedHeaders: 'X-Requested-With, Content-Type, Authorization',
-    //     methods: 'GET, POST, PATCH, PUT, POST, DELETE, OPTIONS'
-    // }))
+    app.use(cors({
+        origin: 'https://www.section.io',
+        origin: ['https://www.section.io', 'https://www.google.com/'],
+        origin: '*',
+        allowedHeaders: 'X-Requested-With, Content-Type, Authorization',
+        methods: 'GET, POST, PATCH, PUT, POST, DELETE, OPTIONS'
+    }))
     
     // parsing to json
     
